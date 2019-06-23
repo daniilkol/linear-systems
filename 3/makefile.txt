@@ -1,0 +1,8 @@
+prog.exe: main.o read.o solve.o
+	gcc -g main.o read.o solve.o -o prog.exe
+main.o: main.c read.h solve.h
+	gcc -g -c main.c
+read.o: read.c read.h
+	gcc -g -c read.c
+solve.o: solve.c solve.h
+	gcc -g -c solve.c
